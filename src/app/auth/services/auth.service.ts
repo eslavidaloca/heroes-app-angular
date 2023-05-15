@@ -12,8 +12,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  get currentUser(): User|null {
-    if(!this.user) return null;
+  get currentUser(): User|undefined {
+    if(!this.user) return undefined;
     return structuredClone(this.user);
   }
 
@@ -22,8 +22,14 @@ export class AuthService {
     return this.http.get<User>(`${  this.baseURL }/users/1`)
       .pipe(
         tap( user => this.user = user ),
-        tap( user => localStorage.setItem('token', user.id.toString()) ),
+        tap( user => localStorage.setItem('token', 'jlhfiuUHNUna.adinaidsn1.12419jai') ),
       )
   }
 
+  logout() {
+    this.user = undefined;
+    localStorage.clear();
+  }
+
 }
+
