@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
@@ -166,6 +166,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "6SGyWYC",
+      "superhero": "Sharkboy",
+      "publisher": "DC Comics",
+      "alter_ego": "Pepito Fernandez",
+      "first_appearance": "Sharkboy #1",
+      "characters": "Sharkboy",
+      "alt_img": "https://images.halloweencostumes.com.mx/products/40251/1-1/peluca-para-ninos-sharkboy.jpg"
+    },
+    {
+      "id": "3Z78g6G",
+      "superhero": "Lavagirl",
+      "publisher": "DC Comics",
+      "alter_ego": "Guadalupe Guzman",
+      "first_appearance": "Sharkboy y lavagirl # 1",
+      "characters": "Lavagirl",
+      "alt_img": "https://images.halloweencostumes.com.mx/products/44805/2-1-273646/adult-lava-girl-costume-alt-3.jpg"
     }
   ]
 }

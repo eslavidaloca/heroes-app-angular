@@ -1,9 +1,31 @@
-<h1>
-  Editar / Agregar
-  heroe
-  <small>Superman</small>
-</h1>
+<div class="grid">
 
+  <div class="col-12 sm:col-6">
+    <div class="flex justify-content-around">
+
+      <h1>
+      {{ currentHero.id ? 'Editar' : 'Agregar' }}
+      heroe
+      <small *ngIf="currentHero.id">{{ currentHero.superhero }}</small>
+      </h1>
+
+      <button
+      mat-fab extended
+      color="accent"
+      aria-label="Go back button"
+      (click)="goBack()"
+      >
+        <mat-icon>arrow_back</mat-icon>
+        Regresar
+      </button>
+
+    </div>
+  </div>
+
+
+
+
+</div>
 <mat-divider class="mb-2"></mat-divider>
 
 <div class="grid">
@@ -79,13 +101,16 @@
 
         <div class="flex justify-content-between">
           <button
+          *ngIf="currentHero.id"
           mat-fab extended
           color="warn"
           aria-label="Delete button"
+          (click)="onDelete()"
           >
             <mat-icon>delete</mat-icon>
             Borrar
           </button>
+          <span></span>
 
           <button
           mat-fab extended
@@ -105,7 +130,7 @@
   <div class="col-12 sm:col-6">
 
     <mat-card>
-      <img matCardImage src="" alt="Imagen del heroe">
+      <img matCardImage [src]="currentHero | heroImage" alt="Imagen del heroe">
     </mat-card>
 
   </div>
