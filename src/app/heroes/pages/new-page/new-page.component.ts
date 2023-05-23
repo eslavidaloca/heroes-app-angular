@@ -77,7 +77,6 @@ export class NewPageComponent implements OnInit {
 
     this.heroesService.addHero( this.currentHero )
       .subscribe( hero => {
-        //TODO: mostrar snackbar y navegar a /heroes/edit/hero.id
         this.router.navigate(['/heroes/edit', hero.id]);
         this.showSnackbar(`${ hero.superhero } creado!`);
       });
